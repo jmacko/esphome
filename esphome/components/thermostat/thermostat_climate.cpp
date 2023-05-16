@@ -928,7 +928,7 @@ bool ThermostatClimate::supplemental_cooling_required_() {
   return this->supports_cool_ && (this->action == climate::CLIMATE_ACTION_COOLING) &&
          (this->cooling_max_runtime_exceeded_ ||
           (this->current_temperature > temperature + this->supplemental_cool_delta_) ||
-          (this->supplemental_action_ == climate::CLIMATE_ACTION_COOLING));
+          (this->supplemental_action_ == climate::CLIMATE_ACTION_COOLING2));
 }
 
 bool ThermostatClimate::supplemental_heating_required_() {
@@ -938,7 +938,7 @@ bool ThermostatClimate::supplemental_heating_required_() {
   return this->supports_heat_ && (this->action == climate::CLIMATE_ACTION_HEATING) &&
          (this->heating_max_runtime_exceeded_ ||
           (this->current_temperature < temperature - this->supplemental_heat_delta_) ||
-          (this->supplemental_action_ == climate::CLIMATE_ACTION_HEATING));
+          (this->supplemental_action_ == climate::CLIMATE_ACTION_HEATING2));
 }
 
 void ThermostatClimate::dump_preset_config_(const char *preset_name, const ThermostatClimateTargetTempConfig &config,

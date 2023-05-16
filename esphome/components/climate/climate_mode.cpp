@@ -31,6 +31,10 @@ const LogString *climate_action_to_string(ClimateAction action) {
       return LOG_STR("COOLING");
     case CLIMATE_ACTION_HEATING:
       return LOG_STR("HEATING");
+    case CLIMATE_ACTION_COOLING2:
+      return LOG_STR("COOLING 2ND");
+    case CLIMATE_ACTION_HEATING2:
+      return LOG_STR("HEATING 2ND");
     case CLIMATE_ACTION_IDLE:
       return LOG_STR("IDLE");
     case CLIMATE_ACTION_DRYING:
